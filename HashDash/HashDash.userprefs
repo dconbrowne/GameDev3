@@ -1,8 +1,10 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\CarControls.js">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Standard Assets\Utility\SmoothFollow2.cs">
     <Files>
-      <File FileName="Assets\Scripts\CarControls.js" Line="40" Column="40" />
+      <File FileName="Assets\Standard Assets\Utility\SmoothFollow2.cs" Line="34" Column="2" />
+      <File FileName="Assets\Scripts\CarControls.js" Line="1" Column="1" />
+      <File FileName="Assets\Standard Assets\Utility\FollowCamera.cs" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

@@ -48,14 +48,20 @@ namespace UnityStandardAssets.Utility
 
 			// Set the position of the camera on the x-z plane to:
 			// distance meters behind the target
-			transform.position = target.position;
-			transform.position -= currentRotation * Vector3.forward * distance;
 
+			transform.position=target.position;
+			transform.position -= /*currentRotation**/  Vector3.forward * distance;
+			transform.Translate(-Vector3.forward * distance);
 			// Set the height of the camera
 			transform.position = new Vector3(transform.position.x ,currentHeight , transform.position.z);
 
+
+
 			// Always look at the target
 			transform.LookAt(target);
+
+			// stay behind car
+
 		}
 	}
 }
