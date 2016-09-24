@@ -50,7 +50,7 @@ namespace UnityStandardAssets.Utility
 			// distance meters behind the target
 
 			transform.position=target.position;
-			transform.position -= /*currentRotation**/  Vector3.forward * distance;
+			transform.position -= currentRotation* Vector3.forward * distance;
 			transform.Translate(-Vector3.forward * distance);
 			// Set the height of the camera
 			transform.position = new Vector3(transform.position.x ,currentHeight , transform.position.z);
@@ -59,7 +59,8 @@ namespace UnityStandardAssets.Utility
 
 			// Always look at the target
 			transform.LookAt(target);
-
+			//transform.position=target.position;  
+			//transform.Translate(-Vector3.forward * distance); After a little difficulty it works, but leave these here just in case.
 			// stay behind car
 
 		}
