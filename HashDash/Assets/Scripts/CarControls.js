@@ -17,9 +17,21 @@ function Start()
  
 function Update () 
 {
-    power=Input.GetAxis("Vertical") * enginePower * Time.deltaTime * 250.0;
+    if(Input.GetAxis("triggers") > 0.2)
+    {
+    	power=Input.GetAxis("triggers") * enginePower * Time.deltaTime * 200.0; //controller right trigger (360-win10)
+    }
+    else if(Input.GetAxis("triggers") < 0)
+    { 
+    	brake= (Input.GetAxis("triggers") * -1) ? body.mass * 0.7: 0.1;
+    }
+    else
+    {
+    	power=0.0;
+		brake=0.0;
+    }
     steer=Input.GetAxis("Horizontal") * maxSteer;
-    brake=Input.GetKey("space") ? body.mass * 0.5: 0.0;
+    //brake=Input.Axis9 ? body.mass * 0.6: 0.1;
    
     GetCollider(0).steerAngle=steer;
     GetCollider(1).steerAngle=steer;
@@ -51,9 +63,7 @@ function Update ()
  
 function GetCollider(n : int) : WheelCollider
 	{
-	    return wheels[n].gameObject.GetComponent(WheelCollider);
-	    
-	    
+	    return wheels[n].gameObject.GetComponent(WheelCollider);    
 	}
 
 function ApplyLocalPositionToVisuals(coll:WheelCollider)
